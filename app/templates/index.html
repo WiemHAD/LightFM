@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<link rel="stylesheet" href="../static/main.css">
+
+<body>
+
+    <form method="POST" action="http://127.0.0.1:5000/page2" > 
+        <label for="selected_artist">Choose your favorite Artist:</label>
+
+<select name="selectedArtist" id="selected_artist" multiple='true'>
+    <option value="">Please Choose your Favorite Artist</option>
+    {% for i in artist_name %}
+    <option value={{ i }} >{{ i }}</option>
+    {% endfor %}
+
+</select>
+<input type="submit" value="Recherche">
+    </form>
+     
+</body>
+</html>
